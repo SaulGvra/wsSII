@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="accesoAlumno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="accesoAlumnoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accesoAlumnoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="accesoPersonal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="accesoPersonalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accesoPersonalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="accesoAspirante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="accesoAspiranteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accesoAspiranteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insAlumno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nocontrol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contra" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dir" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="esp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="carrera" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insAlumnoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insAlumnoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insCarrera">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carrera" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insCarreraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insCarreraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insAspirante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aspiranteid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dir" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="carrera" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insAspiranteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insAspiranteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insPersonal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="personalid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contra" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dir" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="salario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insPersonalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insPersonalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insClase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="claseid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="salon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="capacidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="personalid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materiaid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insClaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insClaseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insClaseXAlumno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="claseid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nocontrol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insClaseXAlumnoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insClaseXAlumnoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insCalificacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="calificacionid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="un1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="un2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="un3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="un4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="un5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="un6" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nocontrol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="claseid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insCalificacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insCalificacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insReinscripcion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rnsid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="monto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nocontrol" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insReinscripcionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insReinscripcionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insMateria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="materiaid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horasp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horast" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="creditos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seriada" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insMateriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insMateriaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insMateriaxCarrera">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="materia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="carrera" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insMateriaxCarreraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insMateriaxCarreraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insAdeudo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biblioteca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="escolares" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="financieros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="otros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nocontrol" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insAdeudoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insAdeudoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delBajaAlumno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nocontrol" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delBajaAlumnoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="delBajaAlumnoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delBajaAspirante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delBajaAspiranteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="delBajaAspiranteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delBajaMateria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nocontrol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materiaid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delBajaMateriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="delBajaMateriaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delBajaPersonal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="delBajaPersonalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="delBajaPersonalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updAlumno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nocontrol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updAlumnoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updAlumnoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updAdeudos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biblioteca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="escolares" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="financieros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="otros" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nocontrol" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updAdeudosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updAdeudosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updAspirante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="noaspirante" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updAspiranteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updAspiranteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updCalificacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="unidad1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unidad2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unidad3" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unidad4" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unidad5" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unidad6" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nocontrol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clase" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updCalificacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updCalificacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updClase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="salon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="capacidad" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="periodo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="personall" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clasee" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updClaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updClaseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updPersonal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contraseña" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="salario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="personall" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updPersonalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updPersonalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updPersonalMaestro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="personall" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updPersonalMaestroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updPersonalMaestroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="accesoAlumnoSoapIn">
+    <wsdl:part name="parameters" element="tns:accesoAlumno" />
+  </wsdl:message>
+  <wsdl:message name="accesoAlumnoSoapOut">
+    <wsdl:part name="parameters" element="tns:accesoAlumnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="accesoPersonalSoapIn">
+    <wsdl:part name="parameters" element="tns:accesoPersonal" />
+  </wsdl:message>
+  <wsdl:message name="accesoPersonalSoapOut">
+    <wsdl:part name="parameters" element="tns:accesoPersonalResponse" />
+  </wsdl:message>
+  <wsdl:message name="accesoAspiranteSoapIn">
+    <wsdl:part name="parameters" element="tns:accesoAspirante" />
+  </wsdl:message>
+  <wsdl:message name="accesoAspiranteSoapOut">
+    <wsdl:part name="parameters" element="tns:accesoAspiranteResponse" />
+  </wsdl:message>
+  <wsdl:message name="insAlumnoSoapIn">
+    <wsdl:part name="parameters" element="tns:insAlumno" />
+  </wsdl:message>
+  <wsdl:message name="insAlumnoSoapOut">
+    <wsdl:part name="parameters" element="tns:insAlumnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insCarreraSoapIn">
+    <wsdl:part name="parameters" element="tns:insCarrera" />
+  </wsdl:message>
+  <wsdl:message name="insCarreraSoapOut">
+    <wsdl:part name="parameters" element="tns:insCarreraResponse" />
+  </wsdl:message>
+  <wsdl:message name="insAspiranteSoapIn">
+    <wsdl:part name="parameters" element="tns:insAspirante" />
+  </wsdl:message>
+  <wsdl:message name="insAspiranteSoapOut">
+    <wsdl:part name="parameters" element="tns:insAspiranteResponse" />
+  </wsdl:message>
+  <wsdl:message name="insPersonalSoapIn">
+    <wsdl:part name="parameters" element="tns:insPersonal" />
+  </wsdl:message>
+  <wsdl:message name="insPersonalSoapOut">
+    <wsdl:part name="parameters" element="tns:insPersonalResponse" />
+  </wsdl:message>
+  <wsdl:message name="insClaseSoapIn">
+    <wsdl:part name="parameters" element="tns:insClase" />
+  </wsdl:message>
+  <wsdl:message name="insClaseSoapOut">
+    <wsdl:part name="parameters" element="tns:insClaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="insClaseXAlumnoSoapIn">
+    <wsdl:part name="parameters" element="tns:insClaseXAlumno" />
+  </wsdl:message>
+  <wsdl:message name="insClaseXAlumnoSoapOut">
+    <wsdl:part name="parameters" element="tns:insClaseXAlumnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insCalificacionSoapIn">
+    <wsdl:part name="parameters" element="tns:insCalificacion" />
+  </wsdl:message>
+  <wsdl:message name="insCalificacionSoapOut">
+    <wsdl:part name="parameters" element="tns:insCalificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="insReinscripcionSoapIn">
+    <wsdl:part name="parameters" element="tns:insReinscripcion" />
+  </wsdl:message>
+  <wsdl:message name="insReinscripcionSoapOut">
+    <wsdl:part name="parameters" element="tns:insReinscripcionResponse" />
+  </wsdl:message>
+  <wsdl:message name="insMateriaSoapIn">
+    <wsdl:part name="parameters" element="tns:insMateria" />
+  </wsdl:message>
+  <wsdl:message name="insMateriaSoapOut">
+    <wsdl:part name="parameters" element="tns:insMateriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="insMateriaxCarreraSoapIn">
+    <wsdl:part name="parameters" element="tns:insMateriaxCarrera" />
+  </wsdl:message>
+  <wsdl:message name="insMateriaxCarreraSoapOut">
+    <wsdl:part name="parameters" element="tns:insMateriaxCarreraResponse" />
+  </wsdl:message>
+  <wsdl:message name="insAdeudoSoapIn">
+    <wsdl:part name="parameters" element="tns:insAdeudo" />
+  </wsdl:message>
+  <wsdl:message name="insAdeudoSoapOut">
+    <wsdl:part name="parameters" element="tns:insAdeudoResponse" />
+  </wsdl:message>
+  <wsdl:message name="delBajaAlumnoSoapIn">
+    <wsdl:part name="parameters" element="tns:delBajaAlumno" />
+  </wsdl:message>
+  <wsdl:message name="delBajaAlumnoSoapOut">
+    <wsdl:part name="parameters" element="tns:delBajaAlumnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="delBajaAspiranteSoapIn">
+    <wsdl:part name="parameters" element="tns:delBajaAspirante" />
+  </wsdl:message>
+  <wsdl:message name="delBajaAspiranteSoapOut">
+    <wsdl:part name="parameters" element="tns:delBajaAspiranteResponse" />
+  </wsdl:message>
+  <wsdl:message name="delBajaMateriaSoapIn">
+    <wsdl:part name="parameters" element="tns:delBajaMateria" />
+  </wsdl:message>
+  <wsdl:message name="delBajaMateriaSoapOut">
+    <wsdl:part name="parameters" element="tns:delBajaMateriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="delBajaPersonalSoapIn">
+    <wsdl:part name="parameters" element="tns:delBajaPersonal" />
+  </wsdl:message>
+  <wsdl:message name="delBajaPersonalSoapOut">
+    <wsdl:part name="parameters" element="tns:delBajaPersonalResponse" />
+  </wsdl:message>
+  <wsdl:message name="updAlumnoSoapIn">
+    <wsdl:part name="parameters" element="tns:updAlumno" />
+  </wsdl:message>
+  <wsdl:message name="updAlumnoSoapOut">
+    <wsdl:part name="parameters" element="tns:updAlumnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="updAdeudosSoapIn">
+    <wsdl:part name="parameters" element="tns:updAdeudos" />
+  </wsdl:message>
+  <wsdl:message name="updAdeudosSoapOut">
+    <wsdl:part name="parameters" element="tns:updAdeudosResponse" />
+  </wsdl:message>
+  <wsdl:message name="updAspiranteSoapIn">
+    <wsdl:part name="parameters" element="tns:updAspirante" />
+  </wsdl:message>
+  <wsdl:message name="updAspiranteSoapOut">
+    <wsdl:part name="parameters" element="tns:updAspiranteResponse" />
+  </wsdl:message>
+  <wsdl:message name="updCalificacionSoapIn">
+    <wsdl:part name="parameters" element="tns:updCalificacion" />
+  </wsdl:message>
+  <wsdl:message name="updCalificacionSoapOut">
+    <wsdl:part name="parameters" element="tns:updCalificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="updClaseSoapIn">
+    <wsdl:part name="parameters" element="tns:updClase" />
+  </wsdl:message>
+  <wsdl:message name="updClaseSoapOut">
+    <wsdl:part name="parameters" element="tns:updClaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="updPersonalSoapIn">
+    <wsdl:part name="parameters" element="tns:updPersonal" />
+  </wsdl:message>
+  <wsdl:message name="updPersonalSoapOut">
+    <wsdl:part name="parameters" element="tns:updPersonalResponse" />
+  </wsdl:message>
+  <wsdl:message name="updPersonalMaestroSoapIn">
+    <wsdl:part name="parameters" element="tns:updPersonalMaestro" />
+  </wsdl:message>
+  <wsdl:message name="updPersonalMaestroSoapOut">
+    <wsdl:part name="parameters" element="tns:updPersonalMaestroResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConexionesSoap">
+    <wsdl:operation name="accesoAlumno">
+      <wsdl:input message="tns:accesoAlumnoSoapIn" />
+      <wsdl:output message="tns:accesoAlumnoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="accesoPersonal">
+      <wsdl:input message="tns:accesoPersonalSoapIn" />
+      <wsdl:output message="tns:accesoPersonalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="accesoAspirante">
+      <wsdl:input message="tns:accesoAspiranteSoapIn" />
+      <wsdl:output message="tns:accesoAspiranteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insAlumno">
+      <wsdl:input message="tns:insAlumnoSoapIn" />
+      <wsdl:output message="tns:insAlumnoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insCarrera">
+      <wsdl:input message="tns:insCarreraSoapIn" />
+      <wsdl:output message="tns:insCarreraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insAspirante">
+      <wsdl:input message="tns:insAspiranteSoapIn" />
+      <wsdl:output message="tns:insAspiranteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insPersonal">
+      <wsdl:input message="tns:insPersonalSoapIn" />
+      <wsdl:output message="tns:insPersonalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insClase">
+      <wsdl:input message="tns:insClaseSoapIn" />
+      <wsdl:output message="tns:insClaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insClaseXAlumno">
+      <wsdl:input message="tns:insClaseXAlumnoSoapIn" />
+      <wsdl:output message="tns:insClaseXAlumnoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insCalificacion">
+      <wsdl:input message="tns:insCalificacionSoapIn" />
+      <wsdl:output message="tns:insCalificacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insReinscripcion">
+      <wsdl:input message="tns:insReinscripcionSoapIn" />
+      <wsdl:output message="tns:insReinscripcionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insMateria">
+      <wsdl:input message="tns:insMateriaSoapIn" />
+      <wsdl:output message="tns:insMateriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insMateriaxCarrera">
+      <wsdl:input message="tns:insMateriaxCarreraSoapIn" />
+      <wsdl:output message="tns:insMateriaxCarreraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insAdeudo">
+      <wsdl:input message="tns:insAdeudoSoapIn" />
+      <wsdl:output message="tns:insAdeudoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="delBajaAlumno">
+      <wsdl:input message="tns:delBajaAlumnoSoapIn" />
+      <wsdl:output message="tns:delBajaAlumnoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="delBajaAspirante">
+      <wsdl:input message="tns:delBajaAspiranteSoapIn" />
+      <wsdl:output message="tns:delBajaAspiranteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="delBajaMateria">
+      <wsdl:input message="tns:delBajaMateriaSoapIn" />
+      <wsdl:output message="tns:delBajaMateriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="delBajaPersonal">
+      <wsdl:input message="tns:delBajaPersonalSoapIn" />
+      <wsdl:output message="tns:delBajaPersonalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updAlumno">
+      <wsdl:input message="tns:updAlumnoSoapIn" />
+      <wsdl:output message="tns:updAlumnoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updAdeudos">
+      <wsdl:input message="tns:updAdeudosSoapIn" />
+      <wsdl:output message="tns:updAdeudosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updAspirante">
+      <wsdl:input message="tns:updAspiranteSoapIn" />
+      <wsdl:output message="tns:updAspiranteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updCalificacion">
+      <wsdl:input message="tns:updCalificacionSoapIn" />
+      <wsdl:output message="tns:updCalificacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updClase">
+      <wsdl:input message="tns:updClaseSoapIn" />
+      <wsdl:output message="tns:updClaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updPersonal">
+      <wsdl:input message="tns:updPersonalSoapIn" />
+      <wsdl:output message="tns:updPersonalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updPersonalMaestro">
+      <wsdl:input message="tns:updPersonalMaestroSoapIn" />
+      <wsdl:output message="tns:updPersonalMaestroSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConexionesSoap" type="tns:ConexionesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="accesoAlumno">
+      <soap:operation soapAction="http://tempuri.org/accesoAlumno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="accesoPersonal">
+      <soap:operation soapAction="http://tempuri.org/accesoPersonal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="accesoAspirante">
+      <soap:operation soapAction="http://tempuri.org/accesoAspirante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insAlumno">
+      <soap:operation soapAction="http://tempuri.org/insAlumno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insCarrera">
+      <soap:operation soapAction="http://tempuri.org/insCarrera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insAspirante">
+      <soap:operation soapAction="http://tempuri.org/insAspirante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insPersonal">
+      <soap:operation soapAction="http://tempuri.org/insPersonal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insClase">
+      <soap:operation soapAction="http://tempuri.org/insClase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insClaseXAlumno">
+      <soap:operation soapAction="http://tempuri.org/insClaseXAlumno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insCalificacion">
+      <soap:operation soapAction="http://tempuri.org/insCalificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insReinscripcion">
+      <soap:operation soapAction="http://tempuri.org/insReinscripcion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insMateria">
+      <soap:operation soapAction="http://tempuri.org/insMateria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insMateriaxCarrera">
+      <soap:operation soapAction="http://tempuri.org/insMateriaxCarrera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insAdeudo">
+      <soap:operation soapAction="http://tempuri.org/insAdeudo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delBajaAlumno">
+      <soap:operation soapAction="http://tempuri.org/delBajaAlumno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delBajaAspirante">
+      <soap:operation soapAction="http://tempuri.org/delBajaAspirante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delBajaMateria">
+      <soap:operation soapAction="http://tempuri.org/delBajaMateria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delBajaPersonal">
+      <soap:operation soapAction="http://tempuri.org/delBajaPersonal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updAlumno">
+      <soap:operation soapAction="http://tempuri.org/updAlumno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updAdeudos">
+      <soap:operation soapAction="http://tempuri.org/updAdeudos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updAspirante">
+      <soap:operation soapAction="http://tempuri.org/updAspirante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updCalificacion">
+      <soap:operation soapAction="http://tempuri.org/updCalificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updClase">
+      <soap:operation soapAction="http://tempuri.org/updClase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updPersonal">
+      <soap:operation soapAction="http://tempuri.org/updPersonal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updPersonalMaestro">
+      <soap:operation soapAction="http://tempuri.org/updPersonalMaestro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConexionesSoap12" type="tns:ConexionesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="accesoAlumno">
+      <soap12:operation soapAction="http://tempuri.org/accesoAlumno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="accesoPersonal">
+      <soap12:operation soapAction="http://tempuri.org/accesoPersonal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="accesoAspirante">
+      <soap12:operation soapAction="http://tempuri.org/accesoAspirante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insAlumno">
+      <soap12:operation soapAction="http://tempuri.org/insAlumno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insCarrera">
+      <soap12:operation soapAction="http://tempuri.org/insCarrera" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insAspirante">
+      <soap12:operation soapAction="http://tempuri.org/insAspirante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insPersonal">
+      <soap12:operation soapAction="http://tempuri.org/insPersonal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insClase">
+      <soap12:operation soapAction="http://tempuri.org/insClase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insClaseXAlumno">
+      <soap12:operation soapAction="http://tempuri.org/insClaseXAlumno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insCalificacion">
+      <soap12:operation soapAction="http://tempuri.org/insCalificacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insReinscripcion">
+      <soap12:operation soapAction="http://tempuri.org/insReinscripcion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insMateria">
+      <soap12:operation soapAction="http://tempuri.org/insMateria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insMateriaxCarrera">
+      <soap12:operation soapAction="http://tempuri.org/insMateriaxCarrera" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insAdeudo">
+      <soap12:operation soapAction="http://tempuri.org/insAdeudo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delBajaAlumno">
+      <soap12:operation soapAction="http://tempuri.org/delBajaAlumno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delBajaAspirante">
+      <soap12:operation soapAction="http://tempuri.org/delBajaAspirante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delBajaMateria">
+      <soap12:operation soapAction="http://tempuri.org/delBajaMateria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delBajaPersonal">
+      <soap12:operation soapAction="http://tempuri.org/delBajaPersonal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updAlumno">
+      <soap12:operation soapAction="http://tempuri.org/updAlumno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updAdeudos">
+      <soap12:operation soapAction="http://tempuri.org/updAdeudos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updAspirante">
+      <soap12:operation soapAction="http://tempuri.org/updAspirante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updCalificacion">
+      <soap12:operation soapAction="http://tempuri.org/updCalificacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updClase">
+      <soap12:operation soapAction="http://tempuri.org/updClase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updPersonal">
+      <soap12:operation soapAction="http://tempuri.org/updPersonal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updPersonalMaestro">
+      <soap12:operation soapAction="http://tempuri.org/updPersonalMaestro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Conexiones">
+    <wsdl:port name="ConexionesSoap" binding="tns:ConexionesSoap">
+      <soap:address location="http://localhost:58746/Conexiones.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ConexionesSoap12" binding="tns:ConexionesSoap12">
+      <soap12:address location="http://localhost:58746/Conexiones.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

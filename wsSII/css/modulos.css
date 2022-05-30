@@ -1,0 +1,32 @@
+/*-------------------------Todos--------------------------------*/
+.paddingt {
+    margin-top: 1em;
+}
+
+/*-------------------------Richi--------------------------------*/
+
+/*-------------------------Diegarma--------------------------------*/
+/* FORMATO FILAS PARES */
+#tag1{
+    background: rgb(147, 221, 255);
+    text-shadow: 1px 1px #fff;
+}
+/* FORMATO ENCABEZADO TABLAS */
+#tag2{
+    background: rgb(0, 136, 255);
+    text-shadow: 1px 1px #fff;
+}
+/* FORMATO TEXTO A MAYUSCULAS */
+#mayus{
+    text-transform: uppercase;
+}
+
+/*-------------------------Danirex--------------------------------*/
+
+/*-------------------------lalo--------------------------------*/
+
+#titulos{
+    padding: 0%;
+}
+
+/*-------------------------zaulol--------------------------------*/

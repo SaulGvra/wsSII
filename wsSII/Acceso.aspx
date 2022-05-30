@@ -64,7 +64,7 @@
                 <p class="card-text">Personal</p>
   
                   <div class="text-center">
-                    <button type="button" class="personal btn btn-block btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#acceso" onclick="cammbiarTexto(2)">Ingresar</button>
+                    <button type="button" class="personal btn btn-block btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#acceso" onclick="cammbiarTexto(2); returnTipo(2);">Ingresar</button>
                   </div>
               </div>
             </div>
@@ -81,7 +81,7 @@
                 <p class="card-text">Alumnos</p>
   
                   <div class="text-center">
-                    <button type="button" class="alumnos btn btn-block btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#acceso" onclick="cammbiarTexto(1)">Ingresar</button>
+                    <button type="button" class="alumnos btn btn-block btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#acceso" onclick="cammbiarTexto(1); returnTipo(1);">Ingresar</button>
                   </div>
               </div>
             </div>
@@ -98,7 +98,7 @@
                 <p class="card-text">Aspirantes</p>
   
                   <div class="text-center">
-                    <button type="button" class="aspirantes btn btn-block btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#acceso" onclick="cammbiarTexto(3)">Ingresar</button>
+                    <button type="button" class="aspirantes btn btn-block btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#acceso" onclick="cammbiarTexto(3); returnTipo(3);">Ingresar</button>
                   </div>
               </div>
             </div>
@@ -120,13 +120,45 @@
             <form class="">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="">
+
+                  <!-- Variable usuario -->
+                  <asp:HiddenField ID="usuarioFloat" Value="0" runat="server" />
+
                 <label id="user" for="floatingInput">No. de Control</label>
               </div>
               <div class="form-floating mb-3">
                 <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="">
+
+                  <!-- Variable contraseña -->
+                  <asp:HiddenField ID="contraFloat" Value="0" runat="server" />
+
+                  <!-- Variable tipo -->
+                  <asp:HiddenField ID="tipo" Value="0" runat="server" />
+
+                  <script language="javascript" type="text/javascript">
+                       function returnStrings() {
+                           debugger;
+                           document.getElementById("usuarioFloat").value = document.getElementById('floatingInput').value;
+                           document.getElementById("contraFloat").value = document.getElementById('floatingPassword').value;
+                      }
+
+                      function returnTipo(num) {
+                          debugger;
+                          if (num == 1) {
+                              document.getElementById("tipo").value = "alumno";
+                          } else if (num == 2) {
+                              document.getElementById("tipo").value = "personal";
+                          } else if (num == 3) {
+                              document.getElementById("tipo").value = "aspirante";
+                          } 
+                           
+                           
+                       }
+                  </script>
+
                 <label id="contra" for="floatingPassword">NIP</label>
               </div>
-              <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit" >Ingresar</button>
+              <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit" OnClientClick="returnStrings()>Ingresar</button>
 
             </form>
           </div>

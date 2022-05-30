@@ -2,62 +2,19 @@
 <wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
-      <s:element name="accesoAlumno">
+      <s:element name="qryAcceso">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="control" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contra" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="accesoAlumnoResponse">
+      <s:element name="qryAccesoResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="accesoAlumnoResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="accesoPersonal">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="accesoPersonalResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="accesoPersonalResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="accesoAspirante">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="accesoAspiranteResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="accesoAspiranteResult">
+            <s:element minOccurs="0" maxOccurs="1" name="qryAccesoResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -636,23 +593,11 @@
       </s:element>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="accesoAlumnoSoapIn">
-    <wsdl:part name="parameters" element="tns:accesoAlumno" />
+  <wsdl:message name="qryAccesoSoapIn">
+    <wsdl:part name="parameters" element="tns:qryAcceso" />
   </wsdl:message>
-  <wsdl:message name="accesoAlumnoSoapOut">
-    <wsdl:part name="parameters" element="tns:accesoAlumnoResponse" />
-  </wsdl:message>
-  <wsdl:message name="accesoPersonalSoapIn">
-    <wsdl:part name="parameters" element="tns:accesoPersonal" />
-  </wsdl:message>
-  <wsdl:message name="accesoPersonalSoapOut">
-    <wsdl:part name="parameters" element="tns:accesoPersonalResponse" />
-  </wsdl:message>
-  <wsdl:message name="accesoAspiranteSoapIn">
-    <wsdl:part name="parameters" element="tns:accesoAspirante" />
-  </wsdl:message>
-  <wsdl:message name="accesoAspiranteSoapOut">
-    <wsdl:part name="parameters" element="tns:accesoAspiranteResponse" />
+  <wsdl:message name="qryAccesoSoapOut">
+    <wsdl:part name="parameters" element="tns:qryAccesoResponse" />
   </wsdl:message>
   <wsdl:message name="insAlumnoSoapIn">
     <wsdl:part name="parameters" element="tns:insAlumno" />
@@ -787,17 +732,9 @@
     <wsdl:part name="parameters" element="tns:updPersonalMaestroResponse" />
   </wsdl:message>
   <wsdl:portType name="ConexionesSoap">
-    <wsdl:operation name="accesoAlumno">
-      <wsdl:input message="tns:accesoAlumnoSoapIn" />
-      <wsdl:output message="tns:accesoAlumnoSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="accesoPersonal">
-      <wsdl:input message="tns:accesoPersonalSoapIn" />
-      <wsdl:output message="tns:accesoPersonalSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="accesoAspirante">
-      <wsdl:input message="tns:accesoAspiranteSoapIn" />
-      <wsdl:output message="tns:accesoAspiranteSoapOut" />
+    <wsdl:operation name="qryAcceso">
+      <wsdl:input message="tns:qryAccesoSoapIn" />
+      <wsdl:output message="tns:qryAccesoSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="insAlumno">
       <wsdl:input message="tns:insAlumnoSoapIn" />
@@ -890,26 +827,8 @@
   </wsdl:portType>
   <wsdl:binding name="ConexionesSoap" type="tns:ConexionesSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="accesoAlumno">
-      <soap:operation soapAction="http://tempuri.org/accesoAlumno" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="accesoPersonal">
-      <soap:operation soapAction="http://tempuri.org/accesoPersonal" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="accesoAspirante">
-      <soap:operation soapAction="http://tempuri.org/accesoAspirante" style="document" />
+    <wsdl:operation name="qryAcceso">
+      <soap:operation soapAction="http://tempuri.org/qryAcceso" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1118,26 +1037,8 @@
   </wsdl:binding>
   <wsdl:binding name="ConexionesSoap12" type="tns:ConexionesSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="accesoAlumno">
-      <soap12:operation soapAction="http://tempuri.org/accesoAlumno" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="accesoPersonal">
-      <soap12:operation soapAction="http://tempuri.org/accesoPersonal" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="accesoAspirante">
-      <soap12:operation soapAction="http://tempuri.org/accesoAspirante" style="document" />
+    <wsdl:operation name="qryAcceso">
+      <soap12:operation soapAction="http://tempuri.org/qryAcceso" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

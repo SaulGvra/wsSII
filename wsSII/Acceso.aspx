@@ -47,127 +47,128 @@
       </header>
 
 
-    <main>
-    <div class="album py-5 bg-light">
-      <div class="container">
+        <form id="form1" runat="server">
+         <main>
+                <div class="album py-5 bg-light">
+                  <div class="container">
   
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div class="col">
-            <div class="card shadow-sm">
-              <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                      <div class="col">
+                        <div class="card shadow-sm">
+                          <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
   
-              <div class="">
-                <img src="imagenes/personal.jpg" alt="" width="96%">
-              </div>
+                          <div class="">
+                            <img src="imagenes/personal.jpg" alt="" width="96%">
+                          </div>
   
-              <div class="card-body">
-                <p class="card-text">Personal</p>
+                          <div class="card-body">
+                            <p class="card-text">Personal</p>
   
-                  <div class="text-center">
-                    <button type="button" class="personal btn btn-block btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#acceso" onclick="cammbiarTexto(2); returnTipo(2);">Ingresar</button>
+                              <div class="text-center">
+                                <button type="button" class="personal btn btn-block btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#acceso" onclick="cammbiarTexto(2); returnTipo(2);">Ingresar</button>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-sm">
+                          <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+  
+                          <div class="">
+                            <img src="imagenes/alumnmos.jpg" alt="" width="100%">
+                          </div>
+  
+                          <div class="card-body">
+                            <p class="card-text">Alumnos</p>
+  
+                              <div class="text-center">
+                                <button type="button" class="alumnos btn btn-block btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#acceso" onclick="cammbiarTexto(1); returnTipo(1);">Ingresar</button>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-sm">
+                          <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+  
+                          <div class="">
+                            <img src="imagenes/aspirantes.jpg" alt="" width="100%">
+                          </div>
+  
+                          <div class="card-body">
+                            <p class="card-text">Aspirantes</p>
+  
+                              <div class="text-center">
+                                <button type="button" class="aspirantes btn btn-block btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#acceso" onclick="cammbiarTexto(3); returnTipo(3);">Ingresar</button>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
-  
-              <div class="">
-                <img src="imagenes/alumnmos.jpg" alt="" width="100%">
-              </div>
-  
-              <div class="card-body">
-                <p class="card-text">Alumnos</p>
-  
-                  <div class="text-center">
-                    <button type="button" class="alumnos btn btn-block btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#acceso" onclick="cammbiarTexto(1); returnTipo(1);">Ingresar</button>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
-  
-              <div class="">
-                <img src="imagenes/aspirantes.jpg" alt="" width="100%">
-              </div>
-  
-              <div class="card-body">
-                <p class="card-text">Aspirantes</p>
-  
-                  <div class="text-center">
-                    <button type="button" class="aspirantes btn btn-block btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#acceso" onclick="cammbiarTexto(3); returnTipo(3);">Ingresar</button>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+                </div>
 
-    <div class="modal fade" id="acceso" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content rounded-5 shadow">
-          <div class="modal-header p-5 pb-4 border-bottom-0">
-            <!-- <h5 class="modal-title">Modal title</h5> -->
-            <h2 class="fw-bold mb-0">Acceso al Sistema</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
+                <div class="modal fade" id="acceso" tabindex="-1" role="dialog">
+                  <div class="modal-dialog">
+                    <div class="modal-content rounded-5 shadow">
+                      <div class="modal-header p-5 pb-4 border-bottom-0">
+                        <!-- <h5 class="modal-title">Modal title</h5> -->
+                        <h2 class="fw-bold mb-0">Acceso al Sistema</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
     
-          <div class="modal-body p-5 pt-0">
-            <form class="">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="">
+                      <div class="modal-body p-5 pt-0">
+                        </div>
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="">
 
-                  <!-- Variable usuario -->
-                  <asp:HiddenField ID="usuarioFloat" Value="0" runat="server" />
+                              <!-- Variable usuario -->
+                              <asp:HiddenField ID="usuarioFloat" Value="0" runat="server" />
 
-                <label id="user" for="floatingInput">No. de Control</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="">
+                            <label id="user" for="floatingInput">No. de Control</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="">
 
-                  <!-- Variable contraseña -->
-                  <asp:HiddenField ID="contraFloat" Value="0" runat="server" />
+                              <!-- Variable contraseña -->
+                              <asp:HiddenField ID="contraFloat" Value="0" runat="server" />
 
-                  <!-- Variable tipo -->
-                  <asp:HiddenField ID="tipo" Value="0" runat="server" />
+                              <!-- Variable tipo -->
+                              <asp:HiddenField ID="tipo" Value="0" runat="server" />
 
-                  <script language="javascript" type="text/javascript">
-                       function returnStrings() {
-                           debugger;
-                           document.getElementById("usuarioFloat").value = document.getElementById('floatingInput').value;
-                           document.getElementById("contraFloat").value = document.getElementById('floatingPassword').value;
-                      }
+                              <script language="javascript" type="text/javascript">
+                                   function returnStrings() {
+                                       debugger;
+                                       document.getElementById("usuarioFloat").value = document.getElementById('floatingInput').value;
+                                       document.getElementById("contraFloat").value = document.getElementById('floatingPassword').value;
+                                  }
 
-                      function returnTipo(num) {
-                          debugger;
-                          if (num == 1) {
-                              document.getElementById("tipo").value = "alumno";
-                          } else if (num == 2) {
-                              document.getElementById("tipo").value = "personal";
-                          } else if (num == 3) {
-                              document.getElementById("tipo").value = "aspirante";
-                          } 
+                                  function returnTipo(num) {
+                                      debugger;
+                                      if (num == 1) {
+                                          document.getElementById("tipo").value = "alumno";
+                                      } else if (num == 2) {
+                                          document.getElementById("tipo").value = "personal";
+                                      } else if (num == 3) {
+                                          document.getElementById("tipo").value = "aspirante";
+                                      } 
                            
                            
-                       }
-                  </script>
+                                   }
+                              </script>
 
-                <label id="contra" for="floatingPassword">NIP</label>
-              </div>
-              <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit" OnClientClick="returnStrings()>Ingresar</button>
+                            <label id="contra" for="floatingPassword">NIP</label>
+                          </div>
+                          
 
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+                        <asp:Button  class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" ID="Button1" runat="server" OnClick="Button2_Click" OnClientClick="returnStrings()" Text="Ingresar" />
     
-  
-  </main>
+                      </div>
+                    </div>
+                  </div>
+              </main>
+    </form>
+    
   
   <footer>
     <hr size="5">
@@ -194,10 +195,7 @@
     <script src="js/main.js"></script>
 
 
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
+
 
 </body>
 </html>

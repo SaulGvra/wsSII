@@ -145,7 +145,7 @@
 
                  <!-- Variable direccion -->
               <asp:HiddenField ID="dir" Value="0" runat="server" />
-
+              <asp:HiddenField ID="noaspirante" Value="0" runat="server" />
             <h6 class="mb-3" id="titulocar">Carrera a elegir</h6>
 
             
@@ -203,7 +203,7 @@
         function returnstrings()
         {
             debugger;
-            document.getElementById("carrera").value = document.getElementById("car").value;
+            document.getElementById("noaspirante").value = document.getElementById(Session["user"]).value;
             document.getElementById("nombre").value = document.getElementById("nomb").value;
             document.getElementById("paterno").value = document.getElementById("pate").value;
             document.getElementById("materno").value = document.getElementById("mate").value;

@@ -20,9 +20,9 @@ public partial class Acceso : System.Web.UI.Page
         //ejecutar el metodo de acceso
         conexiones.ConexionesSoapClient obj = new conexiones.ConexionesSoapClient();
         DataSet ds = new DataSet();
-
+        
         ds = obj.qryAcceso(usuarioFloat.Value, contraFloat.Value, tipo.Value);
-
+        
         //Validar la bandera recibida, envío de mensajes y configuración de 
         //la seguridad
         DataTable dt = ds.Tables["acceso"];
@@ -50,7 +50,11 @@ public partial class Acceso : System.Web.UI.Page
                     {
                         Response.Write("<script language = 'javascript'>document.location.href = 'Inicio.aspx';</script>");
                     }
-                    
+                    else if (Session["tipo"].Equals("aspirante"))
+                    {
+                        Response.Write("<script language = 'javascript'>document.location.href = 'registro_aspirantes.aspx';</script>");
+                    }
+
 
                 }
                 else

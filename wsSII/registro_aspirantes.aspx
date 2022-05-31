@@ -67,12 +67,10 @@
        
         <div class="paddingt row ">
          <div class="col-md-7 col-lg-8">
-        <h3 class="mb-3">Registro del alumno</h3>
-        <h6 class="mb-3" id="titulodatos" >Información del alumno</h6>
+        <h3 class="mb-2">Registro del alumno</h3>
+        <h6 class="mb-2" id="titulodatos" >Información del alumno</h6>
            </div>
-          <div class="row g-3">
-
-            
+          
 
             <div class="row g-3">
                 <div class="col-sm-4">
@@ -135,7 +133,7 @@
                  <!-- Variable telefono -->
               <asp:HiddenField ID="tel" Value="0" runat="server" />
             
-            <div class="col-sm-6">
+            <div class="col-sm-5">
               <label for="lastName" class="form-label">Dirección</label>
               <input type="text" class="form-control"  placeholder=""  id="dire"/>
               <div class="invalid-feedback">
@@ -145,8 +143,8 @@
 
                  <!-- Variable direccion -->
               <asp:HiddenField ID="dir" Value="0" runat="server" />
-              <asp:HiddenField ID="noaspirante" Value="0" runat="server" />
-            <h6 class="mb-3" id="titulocar">Carrera a elegir</h6>
+              
+            
 
             
 
@@ -155,16 +153,16 @@
               
 
            
-</div>
+
             
           
-        <div class="col-sm-6">
-            <hr class="my-4"/>
+        <div class="col-sm-8">
+            <hr class="my-3"/>
             
             <asp:Button class="w-100 btn btn-primary btn-lg" ID="Button1" runat="server" Text="Registrar" OnClientClick="returnstrings()"/>
-       </div>
+        </div>
 
-
+</div>
 
     
 
@@ -203,7 +201,7 @@
         function returnstrings()
         {
             debugger;
-            document.getElementById("noaspirante").value = document.getElementById(Session["user"]).value;
+            // document.getElementById("noaspirante").value = Session["user"];
             document.getElementById("nombre").value = document.getElementById("nomb").value;
             document.getElementById("paterno").value = document.getElementById("pate").value;
             document.getElementById("materno").value = document.getElementById("mate").value;

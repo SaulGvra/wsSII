@@ -13,8 +13,9 @@ public partial class registro_aspirantes : System.Web.UI.Page
         
         conexiones.ConexionesSoapClient obj = new conexiones.ConexionesSoapClient();
         DataSet ds = new DataSet();
-       
-        ds = obj.updAspirante(noaspirante.Value,nombre.Value,paterno.Value,materno.Value,tel.Value,fecha.Value, dir.Value);
+        
+        ds = obj.updAspirante(Session["user"].ToString(), nombre.Value,paterno.Value,materno.Value,tel.Value,fecha.Value, dir.Value);
+        
         
         DataTable dt = ds.Tables["aspirante"];
         String bandera = "";
@@ -22,11 +23,12 @@ public partial class registro_aspirantes : System.Web.UI.Page
         {
             foreach (DataRow dr in dt.Rows)
             {
+                bandera = dr[0].ToString();
                 if (bandera == "1")
                 {
 
                     Response.Write("<script language = 'javascript'>alert('Registro exitoso');</script>");
-                    //Response.Write("<script language = 'javascript'>document.location.href = 'Default2.aspx';</script>");
+                    
 
                 }
                 else
